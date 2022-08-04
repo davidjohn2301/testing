@@ -1,0 +1,71 @@
+<!-- Cloned navbar that comes in on scroll -->
+<nav x-data="initNavbar()"  x-on:scroll.window="scroll()" id="navbar-clone" class="navbar is-fixed is-dark" :class="{
+        'is-active': scrolled,
+        '': !scrolled
+    }">
+    <div class="container">
+        <!-- Brand -->
+        <div class="navbar-brand">
+            <a href="index.html" class="navbar-item">
+                <img class="rotating" src="/img/logo/logo.svg" alt="">
+                <span class="brand-name">OWN NETWORK</span>
+            </a>
+            <!-- Responsive toggle -->
+            <div class="navbar-burger" @click="openMobileMenu()">
+                <div class="menu-toggle">
+                    <span class="icon-box-toggle" :class="{
+                            'active': mobileOpen,
+                            '': !mobileOpen
+                        }">
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Menu -->
+        <div id="cloneNavbarMenu" class="navbar-menu" :class="{
+                'is-active': mobileOpen,
+                '': !mobileOpen
+            }">
+            <div class="navbar-end">
+                <!-- Menu item -->
+                <div class="navbar-item is-nav-link">
+                    <a class="is-centered-responsive" href="index.html">Home</a>
+                </div>
+                <div class="navbar-item is-nav-link">
+                    <a class="is-centered-responsive" href="token.html">Tokenomics</a>
+                </div>
+                <!-- Menu item -->
+                <div class="navbar-item is-nav-link">
+                    <a class="is-centered-responsive" href="team.html">Team</a>
+                </div>
+                <!-- Menu item -->
+                <div class="navbar-item is-nav-link">
+                    <a class="is-centered-responsive" href="roadmap.html">Roadmap</a>
+                </div>
+                <!-- Menu item -->
+                <div class="navbar-item is-nav-link">
+                    <a class="is-centered-responsive" href="blog.html">News</a>
+                </div>
+                <!-- Menu item -->
+                <div class="navbar-item is-nav-link">
+                    <a class="is-centered-responsive" href="#" target="_blank">
+                        Community
+                    </a>
+                </div>
+                <!-- Sign up -->
+                <div class="navbar-item">
+                    <a href="#app.ownnetwork.com" class="button k-button k-secondary raised has-gradient slanted">
+                        <span class="text">Launch App</span>
+                        <span class="front-gradient"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- /Cloned navbar -->
